@@ -1,8 +1,8 @@
 // Creiamo un costruttore per il nostro plugin
-function todoPlugin(dataSource){
+function todoPlugin(className,dataSource){
     // leggiamo i dati che l'utente vuole caricare, i dati potranno essere passati come url o come json interno
     this.dataSource = dataSource;
-    let container = document.getElementsByClassName("todo-project")
+    let container = document.getElementsByClassName(className)
     if(this.dataSource != null){
         try {
             //all'interno del nostro array di json abbiamo data che contiene una serie di json e ci accediamo con .data
