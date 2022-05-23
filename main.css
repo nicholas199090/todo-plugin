@@ -1,0 +1,107 @@
+body { /*creo un colore di backround per la pagina e utilizzo flex*/
+  font-family: sans-serif;
+  color: #172b4d;
+  background-color: #00A3E0;
+  display: flex;
+  align-items: start;
+}
+
+div { /*tutti i div hanno un border arrotondato di 3px*/
+  border-radius: 3px;
+}
+
+#main { /* il contenitore delle nostre liste è sempre "flex"*/
+  display: flex;
+  align-items: start;
+}
+
+.title { /*i titoli hanno queste specifiche*/
+  font-weight: 600;
+  margin: 7px;
+  padding: 10px;
+}
+
+.editable {
+  user-select: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.editing {
+  background: white;
+  color: #172b4d !important;
+  box-shadow:inset 0px 0px 0px 2px #0279bf;
+}
+
+.editing:hover {
+  background: white !important;
+}
+/*definiano che gli item saranno flex con direzione verticale.
+ Assegnamo posizione relative per poter inserire absolute nell'immagine profilo
+ Diciamo che l'item ha backround bianco e che quando andiamo con il mouse sopra l'icona sarà una freccia*/
+.item { 
+  display:flex;
+  flex-direction:column;
+  position: relative;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  margin: 7px;
+  padding: 10px;
+  cursor: pointer !important;
+}
+.item > .title{
+  text-align: center;
+}
+.item > .description{
+  text-align: center;
+}
+
+.list {
+  min-width: 280px;
+  margin: 10px 5px;
+  position: relative;
+  background: #dfe1e6;
+}
+
+
+.add-list {
+  min-width: 280px;
+  margin: 10px 5px;
+  position: relative;
+  background: rgba(0,0,0,.12);
+  color: hsla(0,0%,100%,.8);
+}
+
+
+.add-item {
+  width: calc(100% - 35px);
+  display: inline-block;
+  padding: 10px;
+  margin-top: 0px;
+  color: gray;
+  text-decoration: none;
+  margin: 7px;
+  padding: 10px;
+/*   border-bottom: 1px solid #dfe1e6; */
+}
+
+.add-item:hover {
+  background-color: rgba(9,30,66,.13);
+}
+
+.del {
+  font-weight: 600;
+  color: gray;
+}
+.content {
+  border-bottom: 1px solid #cecece;
+}
+/*Vogliamo che l'icona dell'utente sia di 20*20px e che sia sempre in alto a destra*/
+.profile-image{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}

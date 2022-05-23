@@ -1,0 +1,66 @@
+{
+    "data":[
+       {
+          "type":"list",
+          "id":"1",
+          "title":"Cose da fare",
+          "created":"2015-05-22T14:56:29.000Z",
+          "updated":"2015-05-22T14:56:28.000Z",
+          "item":[
+             {
+                "id":"1",
+                "title":"Fixare bug",
+                "description":"Sistemare bug su google.com",
+                "username":"Gianluca Rossi",
+                "position":"3",
+                "user_id": "1",
+                "icon":"nome-icona.png",
+                "created":"2015-05-22T14:56:29.000Z",
+                "updated":"2015-05-22T14:56:28.000Z"
+             },
+             {
+                "id":"2",
+                "title":"Creare Demo",
+                "description":"Creare demo per Amazon",
+                "username":"Paolo Bianchi",
+                "position":"4",
+                "user_id": "2",
+                "icon":"nome-icona2.png",
+                "created":"2015-05-22T14:56:29.000Z",
+                "updated":"2015-05-22T14:56:28.000Z"
+             }
+          ]
+       },
+       {
+          "type":"list",
+          "id":"3",
+          "title":"Cose fatte",
+          "created":"2015-05-22T14:56:29.000Z",
+          "updated":"2015-05-22T14:56:28.000Z",
+          "item":[
+             {
+                "id":"5",
+                "title":"Chiamare amzone",
+                "description":"Chiamare Bezos per donazione",
+                "username":"Luca Nero",
+                "position":"2",
+                "user_id": "3",
+                "icon":"nome-icona4.png",
+                "created":"2015-05-22T14:56:29.000Z",
+                "updated":"2015-05-22T14:56:28.000Z"
+             },
+             {
+                "id":"4",
+                "title":"Comprare dominio",
+                "description":"Comprare dominio per un nuovo sito",
+                "username":"Erchiap Pone",
+                "position":"3",
+                "user_id": "4",
+                "icon":"nome-icona6.png",
+                "created":"2015-05-22T14:56:29.000Z",
+                "updated":"2015-05-22T14:56:28.000Z"
+             }
+          ]
+       }
+    ]
+ }
