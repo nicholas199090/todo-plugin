@@ -1,9 +1,8 @@
 // Creiamo un costruttore per il nostro plugin
 function todoPlugin(dataSource){
-    // vogliamo che il nostro container abbia la classe todo project
-    let container = document.getElementsByClassName('todo-project');
     // leggiamo i dati che l'utente vuole caricare, i dati potranno essere passati come url o come json interno
     this.dataSource = dataSource;
+    let container = document.getElementsByClassName("todo-project")
     if(this.dataSource != null){
         try {
             //all'interno del nostro array di json abbiamo data che contiene una serie di json e ci accediamo con .data
@@ -14,16 +13,43 @@ function todoPlugin(dataSource){
                for(let i=0; i < data.length; i++){
                 //console.log(data[i])
                    let jsonData = data[i]
+                   createList(container[0],jsonData)
                }
+               //creo la lista per aggiungere altre liste
+               let listAppend = document.createElement("div");
+               listAppend.className= "add-list";
+               let titleAppend = document.createElement("div");
+               titleAppend.classList.add("title","editable");
+               titleAppend.textContent= "Aggiungi lista"
+               container[0].appendChild(listAppend);
+               listAppend.appendChild(titleAppend)
            }
-           // controlliamo che l'oggetto non sia vuoto
           }
           catch (error) {
             alert ('Si è verificato un errore ' + error)
           }
     }
     // creiamo una funzione che avrà il compito di creare una lista
-    this.createList = function (){
-        
+     function createList (container,object){
+        // vogliamo che il nostro container abbia la classe todo project
+       
+        // criamo un div per la lista
+        let list = document.createElement("div");
+        //creiamo un div per il titolo
+        let title = document.createElement("div");
+        //aggiungiamo il titolo che abbiamo preso dal json
+        title.textContent = object.title;
+        // aggiungo le classi che mi permetterano di modificare, cancellare il titolo della lista
+        title.classList.add("title","removable","editable");
+        // assegno un attributo personalizzato alla lista con un id che sia presente a db
+        title.setAttribute("listId", object.id);
+        list.className = "list";
+        container.appendChild(list);
+        list.appendChild(title);
+       
+    }
+    //questa funzione crea un item 
+    this.createItem = function (){
+
     }
 }
