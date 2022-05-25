@@ -105,3 +105,6 @@ div { /*tutti i div hanno un border arrotondato di 3px*/
   top: 5px;
   right: 20px;
 }
+.dragging {
+  opacity: .5 !important;
+} 
